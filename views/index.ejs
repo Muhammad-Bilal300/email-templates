@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Available Email Templates</h2>
+    <ul>
+      <% templates.forEach(tpl => { %>
+        <li><a href="/preview/<%= tpl %>"><%= tpl %> Template</a></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>

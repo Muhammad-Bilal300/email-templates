@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Magic Link Invite</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: rgb(37, 37, 37);
+        min-height: 100vh;
+        padding: 20px;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        /* background: #151515; */
+        background: url("/uploads/images/email-templates-bg.png") no-repeat;
+        background-size: 100%;
+        padding: 50px;
+        position: relative;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .header h1 {
+        color: white;
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        margin-top: 10px;
+      }
+      .logo {
+        background-image: url(https://files.tfgsolutions.pk/public/uploads/emails/invader%20shop-03.png);
+        width: 119px;
+        height: 40px;
+        margin: 0 auto 40px auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      h1 {
+        color: white;
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .main-text {
+        color: #ffffffbf;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        max-width: 450px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+      .referral-code-container {
+        display: flex;
+        width: 480px;
+        padding: 16px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.08) 0%,
+          rgba(255, 255, 255, 0.02) 100%
+        );
+      }
+      .referral-code {
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        display: block;
+        margin: 12px 0;
+        letter-spacing: 2px;
+      }
+      .footer-text {
+        text-align: center;
+        color: white;
+        font-size: 14px;
+        line-height: 1.4;
+        max-width: 450px;
+        margin: 0 auto;
+      }
+      .footer {
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 14px;
+        margin: auto;
+        margin-top: 50px;
+        padding: 20px;
+        border-top: 0.42px solid #ffffff24;
+      }
+      @media (max-width: 480px) {
+        body {
+          padding: 0;
+        }
+        .email-container {
+          max-width: 100%;
+          padding: 20px;
+        }
+        h1 {
+          font-size: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table class="email-container" width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+          <table class="header" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center">
+                <div class="logo"></div>
+                <h1
+                  style="
+                    font-weight: semibold;
+                    margin-top: 30px;
+                    line-height: 0.9;
+                    margin-bottom: 20px;
+                  "
+                >
+                  Your Magic Link
+                </h1>
+
+                <p
+                  style="
+                    color: #ffffff;
+                    font-weight: 400;
+                    margin-bottom: 40px;
+                    margin-top: 10px;
+                  "
+                >
+                  Welcome to Invador Shop
+                </p>
+                <div class="referral-code-container">
+                  <p class="main-text">
+                    Please click the magic link below to sign in to your
+                    account.
+                  </p>
+                  <table
+                    width="100%"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                  >
+                    <tr>
+                      <td align="center" style="padding: 10px 0">
+                        <a
+                          href="#"
+                          style="
+                            display: inline-block;
+                            width: 270px;
+                            padding: 10px 10px;
+                            border-radius: 44px;
+                            background: #fff;
+                            box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.25) inset,
+                              0 2px 4px 0 rgba(0, 0, 0, 0.25) inset;
+                            font-weight: bold;
+                            text-align: center;
+                            text-decoration: none;
+                            color: #000;
+                          "
+                        >
+                          Click here to Sign In
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+          </table>
+
+          <p
+            style="
+              color: gray;
+              text-align: center;
+              padding: 0px 5px;
+              margin-top: 30px;
+              font-size: 14px;
+            "
+          >
+            If you’re on mobile device, you can also copy the link below and
+            paste it into the browser of your choice.
+          </p>
+          <p
+            style="
+              color: white;
+              text-align: center;
+              padding: 0px 5px;
+              font-size: 14px;
+              margin-top: 10px;
+            "
+          >
+            This is your gateway to connect with other resellers, receive
+            support, and stay updated with the latest announcements. We look
+            forward to having you in our community! If you have any questions,
+            feel free to contact us.
+          </p>
+
+          <p
+            style="
+              color: gray;
+              text-align: center;
+              padding: 0px 5px;
+              margin-top: 30px;
+              font-size: 14px;
+              margin-top: 20px;
+            "
+          >
+            If you did not request this email, you can safely ignore it.
+          </p>
+
+          <table class="footer" width="80%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center">
+                Copyright 2024. Invader All Rights Reserved.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

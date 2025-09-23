@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Order Created</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: rgb(37, 37, 37);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        /* background: #151515; */
+        background: url("/uploads/images/email-templates-bg.png") no-repeat;
+        background-size: 100%;
+        padding: 50px;
+        position: relative;
+      }
+      img.bg-image-1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      img.bg-image-2 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+      .product-detail-text p {
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      /* .logo {
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      } */
+
+      .logo-icon {
+        width: 24px;
+        height: 24px;
+        background: #8b5cf6;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .header h1 {
+        color: white;
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        margin-top: 10px;
+      }
+
+      .header p:nth-last-of-type(2) {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .header p:nth-last-of-type(1) {
+        color: #ffffff;
+        font-size: 16;
+        font-weight: 500;
+        margin-top: 10px;
+        max-width: 376px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .order-summary {
+        padding: 16px;
+        backdrop-filter: blur(20px);
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.08) 0%,
+          rgba(255, 255, 255, 0.02) 100%
+        );
+
+        /* border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: 1px solid rgba(255, 255, 255, 0.1); */
+      }
+
+      .summary-title {
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .product-item {
+        display: table;
+        width: 100%;
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .product-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .product-image {
+        width: 60px;
+        height: 60px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        margin-right: 16px;
+      }
+
+      .product-image img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .product-name {
+        color: white;
+        font-size: 14px;
+        /* font-weight: 600; */
+        margin-bottom: 4px;
+      }
+
+      .product-subtitle {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .product-total {
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .order-details {
+        /* background: #ffffff1a;
+        backdrop-filter: blur(20px);
+        border-radius: 0 0 16px 16px; */
+        padding: 20px;
+        margin-bottom: 24px;
+        /* border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+      }
+
+      .detail-row {
+        display: table;
+        width: 100%;
+        /* border-top: 0.42px solid #ffffff24; */
+        border-bottom: 0.42px solid #ffffff24;
+        padding: 15px 0;
+      }
+
+      .detail-label {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .detail-value {
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .status-badge {
+        border-radius: 6px;
+        border: 1px solid #71ff58;
+        background: linear-gradient(
+            0deg,
+            rgba(113, 255, 88, 0.1) 0%,
+            rgba(113, 255, 88, 0.1) 100%
+          ),
+          rgba(0, 0, 0, 0.1);
+        color: #71ff58;
+        padding: 4px 12px;
+        font-size: 12px;
+        font-weight: 600;
+        display: inline-block;
+      }
+
+      .total-row .detail-value {
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .brand-text {
+        color: #6366f1;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .mascot {
+        position: absolute;
+        right: 16px;
+        bottom: 8px;
+        width: 40px;
+        height: 40px;
+        background: #e0e7ff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+      }
+
+      .footer {
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 14px;
+        margin: auto;
+        margin-top: 50px;
+        padding: 20px;
+        border-top: 0.42px solid #ffffff24;
+      }
+      .logo {
+        background-image: url(https://files.tfgsolutions.pk/public/uploads/emails/invader%20shop-03.png);
+        width: 120px;
+        height: 40px;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 480px) {
+        .email-container {
+          max-width: 100%;
+          margin: 0;
+        }
+
+        .order-summary,
+        .order-details,
+        .thank-you-card {
+          padding: 16px;
+        }
+
+        .header h1 {
+          font-size: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table class="email-container" width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+          <!-- <img
+            src="https://files.tfgsolutions.pk/public/uploads/emails/el1.png"
+            class="bg-image-1"
+          />
+          <img
+            src="https://files.tfgsolutions.pk/public/uploads/emails/el2.png"
+            class="bg-image-2"
+          /> -->
+          <table class="header" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center">
+                <div class="logo"></div>
+                <h1
+                  style="
+                    font-weight: semibold;
+                    margin-top: 30px;
+                    line-height: 0.9;
+                    margin-bottom: 20px;
+                  "
+                >
+                  Your order has been created!
+                </h1>
+                <p style="color: #ffffff; font-weight: 400">
+                  Here are the details of your purchase:
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <table
+            class="order-summary-table"
+            width="100%"
+            cellpadding="0"
+            cellspacing="0"
+          >
+            <tr>
+              <td>
+                <table
+                  class="order-summary"
+                  width="96.5%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="margin-left: 9px; margin-right: 9px"
+                >
+                  <tr>
+                    <td>
+                      <% product_variants.forEach(function(item) { %>
+                      <table
+                        class="product-item"
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                      >
+                        <tr>
+                          <td valign="top">
+                            <div style="display: flex">
+                              <p class="product-name">
+                                <%= item.product_name %>,
+                              </p>
+                              <p
+                                class="product-name"
+                                style="color: rgb(180, 180, 180)"
+                              >
+                                &nbsp;2 Months
+                              </p>
+                            </div>
+                            <!-- <p class="product-subtitle">
+                              <%= item.variant_name %>
+                            </p> -->
+                            <p class="product-subtitle">
+                              <!-- <%= item.variant_name %> -->
+                              Quantity:1
+                            </p>
+                          </td>
+                          <td
+                            style="
+                              display: flex;
+                              align-items: start;
+                              justify-content: end;
+                            "
+                          >
+                            <p class="product-total">$<%= item.amount %></p>
+                          </td>
+                        </tr>
+                      </table>
+                      <% }); %>
+
+                      <!-- Button Wrapper -->
+                      <table
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                      >
+                        <tr>
+                          <td align="center" style="padding: 10px 0">
+                            <a
+                              href="#"
+                              style="
+                                display: inline-block;
+                                width: 170px;
+                                padding: 10px 10px;
+                                border-radius: 44px;
+                                background: #fff;
+                                box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.25) inset,
+                                  0 2px 4px 0 rgba(0, 0, 0, 0.25) inset;
+                                font-weight: bold;
+                                text-align: center;
+                                text-decoration: none;
+                                color: #000;
+                              "
+                            >
+                              Continue Shopping
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+          <table class="footer" width="80%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center">
+                Copyright 2024. Invader All Rights Reserved.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

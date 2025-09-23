@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>New Product Request from Customer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: rgb(37, 37, 37);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        /* background: #151515; */
+        background: url("/uploads/images/email-templates-bg.png") no-repeat;
+        background-size: 100%;
+        padding: 50px;
+        position: relative;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      /* .logo {
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      } */
+
+      .logo-icon {
+        width: 24px;
+        height: 24px;
+        background: #8b5cf6;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .header h1 {
+        color: white;
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        margin-top: 10px;
+      }
+
+      .header p:nth-last-of-type(2) {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .header p:nth-last-of-type(1) {
+        color: #ffffff;
+        font-size: 16;
+        font-weight: 500;
+        margin-top: 10px;
+        max-width: 376px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .order-summary {
+        padding: 16px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.03) 0%,
+          rgba(255, 255, 255, 0.08) 100%
+        );
+
+        /* border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: 1px solid rgba(255, 255, 255, 0.1); */
+      }
+
+      .detail-row:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .detail-row {
+        display: table;
+        width: 100%;
+        /* border-top: 0.42px solid #ffffff24; */
+        border-bottom: 0.42px solid #ffffff24;
+        padding: 15px 0;
+      }
+
+      .detail-label {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 16px;
+        font-weight: 400;
+        width: 150px;
+        align-content: start;
+      }
+
+      .detail-value {
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .total-row .detail-value {
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .brand-text {
+        color: #6366f1;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .footer {
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 14px;
+        margin: auto;
+        margin-top: 50px;
+        padding: 20px;
+        border-top: 0.42px solid #ffffff24;
+      }
+      .logo {
+        background-image: url(https://files.tfgsolutions.pk/public/uploads/emails/invader%20shop-03.png);
+        width: 120px;
+        height: 40px;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 480px) {
+        .email-container {
+          max-width: 100%;
+          margin: 0;
+        }
+
+        .order-summary,
+        .order-details,
+        .thank-you-card {
+          padding: 16px;
+        }
+
+        .header h1 {
+          font-size: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table class="email-container" width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+          <!-- <img
+            src="https://files.tfgsolutions.pk/public/uploads/emails/el1.png"
+            class="bg-image-1"
+          />
+          <img
+            src="https://files.tfgsolutions.pk/public/uploads/emails/el2.png"
+            class="bg-image-2"
+          /> -->
+          <table class="header" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center">
+                <div class="logo"></div>
+                <h1
+                  style="
+                    font-weight: semibold;
+                    margin-top: 30px;
+                    line-height: 0.9;
+                    margin-bottom: 20px;
+                  "
+                >
+                  New Product Request from Customer
+                </h1>
+                <p style="color: #ffffff; font-weight: 400">Hi,</p>
+                <p style="color: rgba(172, 172, 172, 0.7); font-size: 12px">
+                  A customer has requested a product that is currently not
+                  available in the store.
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <table
+            class="order-summary"
+            width="100%"
+            cellpadding="0"
+            cellspacing="0"
+          >
+            <tr class="detail-row">
+              <td class="detail-label">Username</td>
+              <td class="detail-value"><%= username %></td>
+            </tr>
+            <tr class="detail-row">
+              <td class="detail-label">Email</td>
+              <td class="detail-value" style="width: auto;display: flex;justify-content: space-between;">
+                <%= email %>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                >
+                  <path
+                    d="M7.5 13.2588C7.5 10.9021 7.5 9.72296 8.2325 8.99129C8.96417 8.25879 10.1433 8.25879 12.5 8.25879H13.3333C15.69 8.25879 16.8692 8.25879 17.6008 8.99129C18.3333 9.72296 18.3333 10.9021 18.3333 13.2588V14.0921C18.3333 16.4488 18.3333 17.628 17.6008 18.3596C16.8692 19.0921 15.69 19.0921 13.3333 19.0921H12.5C10.1433 19.0921 8.96417 19.0921 8.2325 18.3596C7.5 17.628 7.5 16.4488 7.5 14.0921V13.2588Z"
+                    stroke="white"
+                    stroke-width="1.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14.167 8.25863C14.1645 5.79446 14.1278 4.51779 13.4103 3.64363C13.2719 3.475 13.1173 3.32037 12.9487 3.18196C12.0253 2.42529 10.657 2.42529 7.91699 2.42529C5.17783 2.42529 3.80783 2.42529 2.88533 3.18196C2.7167 3.32037 2.56207 3.475 2.42366 3.64363C1.66699 4.56696 1.66699 5.93529 1.66699 8.67529C1.66699 11.4145 1.66699 12.7845 2.42366 13.707C2.56207 13.8756 2.7167 14.0302 2.88533 14.1686C3.76033 14.8853 5.03533 14.9236 7.50033 14.9253"
+                    stroke="white"
+                    stroke-width="1.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </td>
+            </tr>
+            <tr class="detail-row">
+              <td class="detail-label">Requested Product</td>
+              <td class="detail-value"><%= requested_product %></td>
+            </tr>
+            <tr class="detail-row">
+              <td class="detail-label">Date & Time</td>
+              <td class="detail-value"><%= dateTime %></td>
+            </tr>
+            <tr class="detail-row">
+              <td class="detail-label">Message</td>
+              <td class="detail-value"><%= message %></td>
+            </tr>
+          </table>
+
+          <table class="footer" width="80%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center">
+                Copyright 2024. Invader All Rights Reserved.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
