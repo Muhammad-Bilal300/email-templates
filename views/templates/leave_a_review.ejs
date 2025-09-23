@@ -45,13 +45,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
+        color: white !important;
         font-size: 12px;
         font-weight: bold;
       }
 
       .header h1 {
-        color: white;
+        color: white !important;
         font-size: 40px;
         font-weight: 600;
         margin-bottom: 15px;
@@ -59,12 +59,12 @@
       }
 
       .header p:nth-last-of-type(2) {
-        color: white;
+        color: white !important;
         font-size: 16px;
         font-weight: 500;
       }
       .header p {
-        color: white;
+        color: white !important;
         font-size: 16;
         font-weight: 500;
         margin-top: 10px;
@@ -88,13 +88,13 @@
       .detail-row {
         display: table;
         width: 100%;
-        /* border-top: 0.42px solid white24; */
-        /* border-bottom: 0.42px solid white24; */
+        /* border-top: 0.42px solid white !important24; */
+        /* border-bottom: 0.42px solid white !important24; */
         padding-top: 15px;
       }
 
       .detail-label {
-        color: white;
+        color: white !important;
         font-size: 16px;
         font-weight: 400;
         width: 100%;
@@ -103,7 +103,7 @@
       }
 
       .detail-value {
-        color: white;
+        color: white !important;
         font-size: 16px;
         font-weight: 600;
       }
@@ -121,12 +121,12 @@
 
       .footer {
         text-align: center;
-        color: gray;
+        color: gray !important;
         font-size: 14px;
         margin: auto;
         margin-top: 50px;
         padding: 20px;
-        border-top: 0.42px solid gray;
+        border-top: 0.42px solid gray !important;
       }
       .logo {
         background-image: url(https://files.tfgsolutions.pk/public/uploads/emails/invader%20shop-03.png);
@@ -171,18 +171,36 @@
                 <div class="logo"></div>
                 <h1
                   style="
-                    font-weight: semibold;
+                    font-weight: 600;
                     margin-top: 30px;
                     line-height: 0.9;
                     margin-bottom: 20px;
+                    color: #ffffff !important;
                   "
                 >
                   What do you think about the product(s)?
                 </h1>
-                <p style="color: white; font-weight: 400">
+                <p
+                  style="
+                    color: white !important;
+                    font-weight: 400;
+                    text-align: center;
+                  "
+                >
                   If you enjoyed your experience, we’d love for you to share it
-                  and <strong>Leave a Review on</strong>
+                  and
                 </p>
+                <a
+                  href="#"
+                  style="
+                    color: white !important;
+                    font-weight: 400;
+                    text-align: center;
+                    text-decoration: none;
+                  "
+                >
+                  <strong>Leave a Review on</strong>
+                </a>
 
                 <table
                   width="100%"
@@ -197,7 +215,7 @@
                         href="#"
                         style="
                           display: inline-block;
-                          width: 150px;
+                          width: 120px;
                           padding: 8px 10px;
                           border-radius: 44px;
                           background: #00b67a;
@@ -212,7 +230,7 @@
                         <img
                           src="/uploads/images/trust-pilot.png"
                           alt="TrustPilot"
-                          width="100"
+                          width="80"
                           style="
                             /* display: block; */
                             text-align: center;
@@ -223,18 +241,18 @@
                           "
                         />
                       </a>
+
+                      <div
+                        style="
+                          width: 80%;
+                          height: 1px;
+                          background: gray !important;
+                          margin-top: 30px;
+                        "
+                      ></div>
                     </td>
                   </tr>
                 </table>
-
-                <div
-                  style="
-                    width: 80%;
-                    height: 1px;
-                    background: gray;
-                    margin-top: 20px;
-                  "
-                ></div>
               </td>
             </tr>
           </table>
@@ -260,7 +278,11 @@
             >
               <td
                 class="detail-label"
-                style="color: gray; font-size: 12px; padding: 0px 30px"
+                style="
+                  color: gray !important;
+                  font-size: 12px;
+                  padding: 0px 30px;
+                "
               >
                 If your product isn’t functioning as expected, please open a
                 support ticket and mention your Order ID for quicker resolution.
@@ -270,45 +292,85 @@
 
             <tr class="detail-row">
               <td align="center" style="padding: 10px 0">
-                <a
-                  href="#"
-                  style="
-                    display: inline-block;
-                    width: 130px;
-                    padding: 10px 10px;
-                    border-radius: 44px;
-                    background: white;
-                    box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.25) inset,
-                      0 2px 4px 0 rgba(0, 0, 0, 0.25) inset;
-                    font-weight: bold;
-                    text-align: center;
-                    text-decoration: none;
-                    color: #000;
-                    margin-right: 20px;
-                  "
+                <table
+                  align="center"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  style="margin: auto"
                 >
-                  Open Ticket
-                </a>
-                <a
-                  href="#"
-                  style="
-                    display: inline-block;
-                    width: 130px;
-                    padding: 10px 10px;
-                    border-radius: 44px;
-                    background: white;
-                    box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.25) inset,
-                      0 2px 4px 0 rgba(0, 0, 0, 0.25) inset;
-                    font-weight: bold;
-                    text-align: center;
-                    text-decoration: none;
-                    color: #000;
-                  "
-                >
-                  Live Chat
-                </a>
+                  <tr>
+                    <!-- Open Ticket button -->
+                    <td
+                      class="stack-column"
+                      style="padding: 5px; text-align: center"
+                    >
+                      <a
+                        href="#"
+                        style="
+                          display: inline-block;
+                          width: 130px;
+                          padding: 10px 10px;
+                          border-radius: 44px;
+                          background: #ffffff !important;
+                          color: #000000 !important;
+                          font-weight: bold;
+                          text-align: center;
+                          text-decoration: none;
+                          box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.25) inset,
+                            0 2px 4px rgba(0, 0, 0, 0.25) inset;
+                        "
+                      >
+                        Open Ticket
+                      </a>
+                    </td>
+
+                    <!-- Live Chat button -->
+                    <td
+                      class="stack-column"
+                      style="padding: 5px; text-align: center"
+                    >
+                      <a
+                        href="#"
+                        style="
+                          display: inline-block;
+                          width: 130px;
+                          padding: 10px 10px;
+                          border-radius: 44px;
+                          background: #ffffff !important;
+                          color: #000000 !important;
+                          font-weight: bold;
+                          text-align: center;
+                          text-decoration: none;
+                          box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.25) inset,
+                            0 2px 4px rgba(0, 0, 0, 0.25) inset;
+                        "
+                      >
+                        Live Chat
+                      </a>
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
+
+            <!-- Add this in <style> -->
+            <style>
+              @media (max-width: 480px) {
+                .stack-column {
+                  display: block !important;
+                  width: 100% !important;
+                  text-align: center !important;
+                }
+                .stack-column a {
+                  width: 80% !important; /* button width on mobile */
+                  max-width: 120px;
+                  min-width: 120px;
+                  margin: 5px auto !important;
+                  display: block !important;
+                }
+              }
+            </style>
           </table>
 
           <table class="footer" width="80%" cellpadding="0" cellspacing="0">
