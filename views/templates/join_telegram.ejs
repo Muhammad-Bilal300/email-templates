@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <title>New Product Request from Customer</title>
+    <title>Leave a Review</title>
     <style>
       * {
         margin: 0;
@@ -25,7 +25,8 @@
         max-width: 600px;
         margin: 0 auto;
         /* background: #151515; */
-        background: url("/uploads/images/email-templates-bg.png") no-repeat;
+        background: url("http://localhost:8080/uploads/images/email-templates-bg.png")
+          no-repeat;
         background-size: 100%;
         padding: 50px;
         position: relative;
@@ -35,17 +36,6 @@
         text-align: center;
         margin-bottom: 50px;
       }
-
-      /* .logo {
-        color: white;
-        font-size: 16px;
-        font-weight: 600;
-        margin-bottom: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-      } */
 
       .logo-icon {
         width: 24px;
@@ -73,26 +63,20 @@
         font-size: 16px;
         font-weight: 500;
       }
-      .header p:nth-last-of-type(1) {
+      .header p {
         color: white;
         font-size: 16;
         font-weight: 500;
         margin-top: 10px;
-        max-width: 376px;
+        max-width: 470px;
         margin-left: auto;
         margin-right: auto;
       }
 
-      .order-summary {
+      .purchase-summary {
         padding: 16px;
-        border-radius: 16px;
-        background: url("http://localhost:8080/uploads/images/gradient-image-2.png")
-          no-repeat;
-        background-size: cover;
-
-        /* border-top: 1px solid rgba(255, 255, 255, 0.1);
-        border-left: 1px solid rgba(255, 255, 255, 0.1);
-        border-right: 1px solid rgba(255, 255, 255, 0.1); */
+        border-radius: 20px;
+        margin-top: -60px;
       }
 
       .detail-row:last-child {
@@ -105,16 +89,17 @@
         display: table;
         width: 100%;
         /* border-top: 0.42px solid white24; */
-        border-bottom: 0.42px solid white24;
-        padding: 15px 0;
+        /* border-bottom: 0.42px solid white24; */
+        padding-top: 15px;
       }
 
       .detail-label {
-        color: rgba(255, 255, 255, 0.7);
+        color: white;
         font-size: 16px;
         font-weight: 400;
-        width: 150px;
-        align-content: start;
+        width: 100%;
+        align-content: center;
+        align-items: center;
       }
 
       .detail-value {
@@ -192,74 +177,84 @@
                     margin-bottom: 20px;
                   "
                 >
-                  New Product Request from Customer
+                  Join our telegram community!
                 </h1>
-                <p style="color: white; font-weight: 400">Hi,</p>
-                <p style="color: rgba(172, 172, 172, 0.7); font-size: 12px">
-                  A customer has requested a product that is currently not
-                  available in the store.
+                <p style="color: white; font-weight: 400">Hi Username,</p>
+                <p style="color: white; font-weight: 400">
+                  We’d love to invite you to join our official Telegram
+                  community!
                 </p>
+
+                <table
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  style="margin-top: 15px"
+                >
+                  <tr>
+                    <td align="center" style="padding: 10px 0">
+                      <a
+                        href="#"
+                        style="
+                          display: inline-block;
+                          width: 300px;
+                          padding: 8px 10px;
+                          border-radius: 44px;
+
+                          font-weight: bold;
+                          text-align: center;
+                          text-decoration: none;
+                        "
+                      >
+                        <img
+                          src="/uploads/images/telegram-button-img.png"
+                          alt="join_telegram"
+                          width="250"
+                          style="
+                            /* display: block; */
+                            text-align: center;
+                            justify-content: center;
+                            border: 0;
+                            outline: none;
+                            text-decoration: none;
+                          "
+                        />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+
+                <div
+                  style="
+                    width: 80%;
+                    height: 1px;
+                    background: gray;
+                    margin-top: 20px;
+                  "
+                ></div>
               </td>
             </tr>
           </table>
 
           <table
-            class="order-summary"
+            class="purchase-summary"
             width="100%"
             cellpadding="0"
             cellspacing="0"
           >
-            <tr class="detail-row">
-              <td class="detail-label">Username</td>
-              <td class="detail-value"><%= username %></td>
-            </tr>
-            <tr class="detail-row">
-              <td class="detail-label">Email</td>
+            <tr
+              class="detail-row"
+              style="align-items: center; text-align: center"
+            >
               <td
-                class="detail-value"
-                style="
-                  width: auto;
-                  display: flex;
-                  justify-content: space-between;
-                "
+                class="detail-label"
+                style="color: gray; font-size: 12px; padding: 0px 30px"
               >
-                <%= email %>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="21"
-                  viewBox="0 0 20 21"
-                  fill="none"
-                >
-                  <path
-                    d="M7.5 13.2588C7.5 10.9021 7.5 9.72296 8.2325 8.99129C8.96417 8.25879 10.1433 8.25879 12.5 8.25879H13.3333C15.69 8.25879 16.8692 8.25879 17.6008 8.99129C18.3333 9.72296 18.3333 10.9021 18.3333 13.2588V14.0921C18.3333 16.4488 18.3333 17.628 17.6008 18.3596C16.8692 19.0921 15.69 19.0921 13.3333 19.0921H12.5C10.1433 19.0921 8.96417 19.0921 8.2325 18.3596C7.5 17.628 7.5 16.4488 7.5 14.0921V13.2588Z"
-                    stroke="white"
-                    stroke-width="1.25"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M14.167 8.25863C14.1645 5.79446 14.1278 4.51779 13.4103 3.64363C13.2719 3.475 13.1173 3.32037 12.9487 3.18196C12.0253 2.42529 10.657 2.42529 7.91699 2.42529C5.17783 2.42529 3.80783 2.42529 2.88533 3.18196C2.7167 3.32037 2.56207 3.475 2.42366 3.64363C1.66699 4.56696 1.66699 5.93529 1.66699 8.67529C1.66699 11.4145 1.66699 12.7845 2.42366 13.707C2.56207 13.8756 2.7167 14.0302 2.88533 14.1686C3.76033 14.8853 5.03533 14.9236 7.50033 14.9253"
-                    stroke="white"
-                    stroke-width="1.25"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                Don’t miss out—our Telegram is the best place to stay connected
+                and be part of what’s next.
               </td>
-            </tr>
-            <tr class="detail-row">
-              <td class="detail-label">Requested Product</td>
-              <td class="detail-value"><%= requested_product %></td>
-            </tr>
-            <tr class="detail-row">
-              <td class="detail-label">Date & Time</td>
-              <td class="detail-value"><%= dateTime %></td>
-            </tr>
-            <tr class="detail-row">
-              <td class="detail-label">Message</td>
-              <td class="detail-value"><%= message %></td>
+              <!-- <td class="detail-value">example@example.com</td> -->
             </tr>
           </table>
 
