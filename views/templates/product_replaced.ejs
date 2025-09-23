@@ -114,7 +114,7 @@
       }
 
       .order-summary-table {
-        border-radius: 50px;
+        border-radius: 35px;
         background: url("http://localhost:8080/uploads/images/gradient-image-1.png")
           no-repeat;
         background-size: cover;
@@ -386,10 +386,6 @@
                 >
                   <tr>
                     <td>
-                      <!-- <div class="summary-title">
-                        Order id:
-                        <span class="status-badge"><%= invoice_id %></span>
-                      </div> -->
                       <% product_variants.forEach(function(item) { %>
                       <table
                         class="product-item"
@@ -410,15 +406,8 @@
                                 &nbsp;2 Months
                               </p>
                             </div>
-                            <!-- <p class="product-subtitle">
-                              <%= item.variant_name %>
-                            </p> -->
-                            <p class="product-subtitle">
-                              <!-- <%= item.variant_name %> -->
-                              Quantity:1
-                            </p>
-                            <!-- <p class="product-total">$<%= item.price %></p> -->
-                            <!-- <p class="product-total">$<%= invoice_amount %></p> -->
+
+                            <p class="product-subtitle">Quantity:1</p>
                           </td>
                           <td
                             style="
@@ -427,7 +416,7 @@
                               justify-content: end;
                             "
                           >
-                            <p class="product-total">$<%= invoice_amount %></p>
+                            <p class="product-total">$<%= item.amount %></p>
                           </td>
                         </tr>
                       </table>
@@ -452,32 +441,24 @@
                       >
                         <tr>
                           <td class="detail-label">Disney</td>
-                          <td align="right" class="detail-value">
+                          <td align="center" class="detail-value">
                             example@example.com:Testd82dj10j0
                           </td>
                           <td>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
+                            <img
+                              src="/uploads/images/copy-icon.png"
+                              alt="copy_icon"
                               width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                            >
-                              <path
-                                d="M7.5 13.2588C7.5 10.9021 7.5 9.72296 8.2325 8.99129C8.96417 8.25879 10.1433 8.25879 12.5 8.25879H13.3333C15.69 8.25879 16.8692 8.25879 17.6008 8.99129C18.3333 9.72296 18.3333 10.9021 18.3333 13.2588V14.0921C18.3333 16.4488 18.3333 17.628 17.6008 18.3596C16.8692 19.0921 15.69 19.0921 13.3333 19.0921H12.5C10.1433 19.0921 8.96417 19.0921 8.2325 18.3596C7.5 17.628 7.5 16.4488 7.5 14.0921V13.2588Z"
-                                stroke="white"
-                                stroke-width="1.25"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                              <path
-                                d="M14.167 8.25863C14.1645 5.79446 14.1278 4.51779 13.4103 3.64363C13.2719 3.475 13.1173 3.32037 12.9487 3.18196C12.0253 2.42529 10.657 2.42529 7.91699 2.42529C5.17783 2.42529 3.80783 2.42529 2.88533 3.18196C2.7167 3.32037 2.56207 3.475 2.42366 3.64363C1.66699 4.56696 1.66699 5.93529 1.66699 8.67529C1.66699 11.4145 1.66699 12.7845 2.42366 13.707C2.56207 13.8756 2.7167 14.0302 2.88533 14.1686C3.76033 14.8853 5.03533 14.9236 7.50033 14.9253"
-                                stroke="white"
-                                stroke-width="1.25"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </svg>
+                              height="20"
+                              style="
+                                /* display: block; */
+                                text-align: center;
+                                justify-content: center;
+                                border: 0;
+                                outline: none;
+                                text-decoration: none;
+                              "
+                            />
                           </td>
                         </tr>
                       </table>
@@ -528,10 +509,6 @@
                 >
                   <tr>
                     <td>
-                      <!-- <div class="summary-title">
-                        Order id:
-                        <span class="status-badge"><%= invoice_id %></span>
-                      </div> -->
                       <% product_variants.forEach(function(item) { %>
                       <table
                         class="product-item"
@@ -552,16 +529,13 @@
                                 &nbsp;2 Months
                               </p>
                             </div>
-                            <!-- <p class="product-subtitle">
-                              <%= item.variant_name %>
-                            </p> -->
+
                             <p class="product-subtitle">
                               <!-- <%= item.variant_name %> -->
                               Quantity:1
                             </p>
-                            <!-- <p class="product-total">$<%= item.price %></p> -->
-                            <!-- <p class="product-total">$<%= invoice_amount %></p> -->
                           </td>
+
                           <td
                             style="
                               display: flex;
@@ -569,7 +543,7 @@
                               justify-content: end;
                             "
                           >
-                            <p class="product-total">$<%= invoice_amount %></p>
+                            <p class="product-total">$<%= item.amount %></p>
                           </td>
                         </tr>
                       </table>
@@ -594,32 +568,24 @@
                       >
                         <tr>
                           <td class="detail-label">Disney</td>
-                          <td align="right" class="detail-value">
+                          <td align="center" class="detail-value">
                             example@example.com:Testd82dj10j0
                           </td>
                           <td>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
+                            <img
+                              src="/uploads/images/copy-icon.png"
+                              alt="copy_icon"
                               width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                            >
-                              <path
-                                d="M7.5 13.2588C7.5 10.9021 7.5 9.72296 8.2325 8.99129C8.96417 8.25879 10.1433 8.25879 12.5 8.25879H13.3333C15.69 8.25879 16.8692 8.25879 17.6008 8.99129C18.3333 9.72296 18.3333 10.9021 18.3333 13.2588V14.0921C18.3333 16.4488 18.3333 17.628 17.6008 18.3596C16.8692 19.0921 15.69 19.0921 13.3333 19.0921H12.5C10.1433 19.0921 8.96417 19.0921 8.2325 18.3596C7.5 17.628 7.5 16.4488 7.5 14.0921V13.2588Z"
-                                stroke="white"
-                                stroke-width="1.25"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                              <path
-                                d="M14.167 8.25863C14.1645 5.79446 14.1278 4.51779 13.4103 3.64363C13.2719 3.475 13.1173 3.32037 12.9487 3.18196C12.0253 2.42529 10.657 2.42529 7.91699 2.42529C5.17783 2.42529 3.80783 2.42529 2.88533 3.18196C2.7167 3.32037 2.56207 3.475 2.42366 3.64363C1.66699 4.56696 1.66699 5.93529 1.66699 8.67529C1.66699 11.4145 1.66699 12.7845 2.42366 13.707C2.56207 13.8756 2.7167 14.0302 2.88533 14.1686C3.76033 14.8853 5.03533 14.9236 7.50033 14.9253"
-                                stroke="white"
-                                stroke-width="1.25"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </svg>
+                              height="20"
+                              style="
+                                /* display: block; */
+                                text-align: center;
+                                justify-content: center;
+                                border: 0;
+                                outline: none;
+                                text-decoration: none;
+                              "
+                            />
                           </td>
                         </tr>
                       </table>

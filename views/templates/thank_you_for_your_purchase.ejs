@@ -26,9 +26,10 @@
         margin: 0 auto;
         /* background: #151515; */
         background: url("/uploads/images/email-templates-bg.png") no-repeat;
-        background-size: 100%;
+        background-size: cover;
         padding: 50px;
         position: relative;
+        
       }
       img.bg-image-1 {
         position: absolute;
@@ -113,10 +114,11 @@
       }
 
       .purchase-summary-table {
-        border-radius: 50px;
+        border-radius: 35px;
         background: url("http://localhost:8080/uploads/images/gradient-image-1.png")
           no-repeat;
         background-size: cover;
+        height: auto;
       }
 
       .summary-title {
@@ -172,15 +174,9 @@
         font-weight: 600;
       }
 
-      .order-details {
-        /* background: white1a;
-        backdrop-filter: blur(20px);
-        border-radius: 0 0 16px 16px; */
+      .purchase-details {
         padding: 20px;
         margin-bottom: 24px;
-        /* border-left: 1px solid rgba(255, 255, 255, 0.1);
-        border-right: 1px solid rgba(255, 255, 255, 0.1);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
       }
 
       .detail-row {
@@ -195,6 +191,7 @@
         color: rgba(255, 255, 255, 0.7);
         font-size: 16px;
         font-weight: 400;
+        width: 110px;
       }
 
       .detail-value {
@@ -289,8 +286,8 @@
           margin: 0;
         }
 
-        .order-summary,
-        .order-details,
+        .purchase-summary,
+        .purchase-details,
         .thank-you-card {
           padding: 16px;
         }
@@ -377,10 +374,6 @@
                 >
                   <tr>
                     <td>
-                      <!-- <div class="summary-title">
-                        Order id:
-                        <span class="status-badge"><%= invoice_id %></span>
-                      </div> -->
                       <% product_variants.forEach(function(item) { %>
                       <table
                         class="product-item"
@@ -401,15 +394,8 @@
                                 &nbsp;2 Months
                               </p>
                             </div>
-                            <!-- <p class="product-subtitle">
-                              <%= item.variant_name %>
-                            </p> -->
-                            <p class="product-subtitle">
-                              <!-- <%= item.variant_name %> -->
-                              Quantity:1
-                            </p>
-                            <!-- <p class="product-total">$<%= item.price %></p> -->
-                            <!-- <p class="product-total">$<%= invoice_amount %></p> -->
+
+                            <p class="product-subtitle">Quantity:1</p>
                           </td>
                           <td
                             style="
@@ -418,7 +404,7 @@
                               justify-content: end;
                             "
                           >
-                            <p class="product-total">$<%= invoice_amount %></p>
+                            <p class="product-total">$<%= item.amount %></p>
                           </td>
                         </tr>
                       </table>
@@ -427,8 +413,8 @@
                   </tr>
                 </table>
 
-                <!-- <table
-                  class="order-details"
+                <table
+                  class="purchase-details"
                   width="100%"
                   cellpadding="0"
                   cellspacing="0"
@@ -440,75 +426,56 @@
                         width="100%"
                         cellpadding="0"
                         cellspacing="0"
+                        style="margin-top: -20px"
                       >
                         <tr>
-                          <td class="detail-label">Purchase Date</td>
-                          <td align="right" class="detail-value">
-                            <%= purchase_date %>
+                          <td
+                            style="
+                              font-size: 24px;
+                              color: gray;
+                              font-weight: 600;
+                            "
+                          >
+                            Disney
                           </td>
                         </tr>
-                      </table>
-                      <table
-                        class="detail-row"
-                        width="100%"
-                        cellpadding="0"
-                        cellspacing="0"
-                      >
-                        <tr>
-                          <td class="detail-label">Payment Gateway</td>
-                          <td align="right" class="detail-value">
-                            <%= payment_gateway %>
+                        <tr class="detail-row">
+                          <td class="detail-label">Credentials</td>
+                          <td align="left" class="detail-value">
+                            example@example.com:Testd82dj10j0
+                          </td>
+                          <td>
+                            <img
+                              src="/uploads/images/copy-icon.png"
+                              alt="copy_icon"
+                              width="20"
+                              height="20"
+                              style="
+                                /* display: block; */
+                                text-align: center;
+                                justify-content: center;
+                                border: 0;
+                                outline: none;
+                                text-decoration: none;
+                              "
+                            />
                           </td>
                         </tr>
-                      </table>
-                      <table
-                        class="detail-row"
-                        width="100%"
-                        cellpadding="0"
-                        cellspacing="0"
-                      >
-                        <tr>
-                          <td class="detail-label">Payment Status</td>
-                          <td align="right">
-                            <span class="status-badge"
-                              ><%= payment_status %></span
-                            >
-                          </td>
-                        </tr>
-                      </table>
 
-                      <table
-                        class="detail-row"
-                        width="100%"
-                        cellpadding="0"
-                        cellspacing="0"
-                      >
-                        <tr>
-                          <td class="detail-label">Wallet Amount Deduction</td>
-                          <td align="right" class="detail-value">
-                            <%= wallet_amount %>
-                          </td>
-                        </tr>
-                      </table>
-
-                      <table
-                        class="detail-row"
-                        width="100%"
-                        cellpadding="0"
-                        cellspacing="0"
-                      >
-                        <tr>
-                          <td class="detail-label">
-                            <%= payment_gateway %> deduction
-                          </td>
-                          <td align="right" class="detail-value">
-                            <%= type_amount %>
+                        <tr class="detail-row">
+                          <td class="detail-label">Note</td>
+                          <td
+                            align="left"
+                            class="detail-value"
+                            style="color: blue"
+                          >
+                            example@example.com:Testd82dj10j0
                           </td>
                         </tr>
                       </table>
                     </td>
                   </tr>
-                </table> -->
+                </table>
               </td>
             </tr>
           </table>
