@@ -25,7 +25,7 @@
         max-width: 600px;
         margin: 0 auto;
         /* background: #151515; */
-       background: url("/uploads/images/email-templates-bg.png") no-repeat;
+        background: url("/uploads/images/email-templates-bg.png") no-repeat;
         background-size: 100%;
         padding: 50px;
         position: relative;
@@ -98,14 +98,10 @@
       }
 
       .stock-summary-table {
-        backdrop-filter: blur(20px);
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.03) 0%,
-          rgba(255, 255, 255, 0.08) 100%
-        );
+        border-radius: 50px;
+        background: url("http://localhost:8080/uploads/images/gradient-image-1.png")
+          no-repeat;
+        background-size: cover;
       }
 
       .stock-details {
@@ -218,7 +214,7 @@
             width="100%"
             cellpadding="0"
             cellspacing="0"
-            style="margin-bottom: 15px;"
+            style="margin-bottom: 15px"
           >
             <tr>
               <td>
@@ -264,7 +260,13 @@
                       >
                         <tr>
                           <td class="detail-label">Reamaining Qty.</td>
-                           <td align="right" class="detail-value" style="color: red;"><%= rem_qty %></td>
+                          <td
+                            align="right"
+                            class="detail-value"
+                            style="color: red"
+                          >
+                            <%= rem_qty %>
+                          </td>
                         </tr>
                       </table>
 

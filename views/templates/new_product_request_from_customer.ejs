@@ -85,13 +85,10 @@
 
       .order-summary {
         padding: 16px;
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.03) 0%,
-          rgba(255, 255, 255, 0.08) 100%
-        );
+        border-radius: 16px;
+        background: url("http://localhost:8080/uploads/images/gradient-image-2.png")
+          no-repeat;
+        background-size: cover;
 
         /* border-top: 1px solid rgba(255, 255, 255, 0.1);
         border-left: 1px solid rgba(255, 255, 255, 0.1);
@@ -218,7 +215,14 @@
             </tr>
             <tr class="detail-row">
               <td class="detail-label">Email</td>
-              <td class="detail-value" style="width: auto;display: flex;justify-content: space-between;">
+              <td
+                class="detail-value"
+                style="
+                  width: auto;
+                  display: flex;
+                  justify-content: space-between;
+                "
+              >
                 <%= email %>
 
                 <svg

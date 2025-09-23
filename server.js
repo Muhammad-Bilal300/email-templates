@@ -1,39 +1,3 @@
-// const express = require("express");
-// const path = require("path");
-
-// const app = express();
-
-// // Set EJS as the template engine
-// app.set("view engine", "ejs");
-// app.set("views", path.join(__dirname, "views"));
-
-// // Route: list available templates
-// app.get("/", (req, res) => {
-//   res.render("index", {
-//     templates: ["welcome", "reset-password", "invoice","order-confirmations-2"], // list of templates
-//   });
-// });
-
-// // Route: preview a specific email template
-// app.get("/preview/:template", (req, res) => {
-//   const { template } = req.params;
-
-//   // Sample data you want inside template
-//   const templateData = {
-//     username: "John Doe",
-//     resetLink: "https://example.com/reset/12345",
-//     invoiceId: "INV-001",
-//     amount: "$299.99",
-//   };
-
-//   res.render(`templates/${template}`, templateData);
-// });
-
-// const PORT = 8080;
-// app.listen(PORT, () => {
-//   console.log(`Server running at http://localhost:${PORT}`);
-// });
-
 const express = require("express");
 const path = require("path");
 
@@ -60,9 +24,9 @@ app.get("/", (req, res) => {
       "otp_email",
       "temporary_account_suspension",
       "out_of_stock",
-      "new_product_sustomer_from_customer",
+      "new_product_request_from_customer",
       "account_permanently_suspended",
-      "thank_you_for_your_purchase"
+      "thank_you_for_your_purchase",
     ], // list of templates
   });
 });
@@ -211,3 +175,12 @@ const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
+
+
+
+
+
+
+
+
+
