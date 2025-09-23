@@ -63,12 +63,12 @@
         line-height: 1.6;
       }
       .referral-code-container {
-        display: flex;
+        /* display: flex; */
         width: 480px;
         padding: 16px;
-        flex-direction: column;
+        /* flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
         border-radius: 14px;
         border: 1px solid #ffffff1a;
         background: #36363680;
@@ -143,41 +143,53 @@
                 >
                   Welcome to Invador Shop
                 </p>
-                <div class="referral-code-container">
-                  <p class="main-text">
-                    Please click the magic link below to sign in to your
-                    account.
-                  </p>
-                  <table
-                    width="100%"
-                    cellpadding="0"
-                    cellspacing="0"
-                    role="presentation"
-                  >
-                    <tr>
-                      <td align="center" style="padding: 10px 0">
-                        <a
-                          href="#"
-                          style="
-                            display: inline-block;
-                            width: 270px;
-                            padding: 10px 10px;
-                            border-radius: 44px;
-                            background: white !important;
-                            box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.25) inset,
-                              0 2px 4px 0 rgba(0, 0, 0, 0.25) inset;
-                            font-weight: bold;
-                            text-align: center;
-                            text-decoration: none;
-                            color: #000;
-                          "
-                        >
-                          Click here to Sign In
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
+
+                <table width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td class="referral-code-container">
+                      <p
+                        style="
+                          font-size: 14px;
+                          color: white !important;
+                          padding: 5px 20px;
+                          text-align: center;
+                        "
+                      >
+                        Please click the magic link below to sign in to your
+                        account.
+                      </p>
+                      <table
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                      >
+                        <tr>
+                          <td align="center" style="padding: 10px 0">
+                            <a
+                              href="#"
+                              style="
+                                display: inline-block;
+                                width: 270px;
+                                padding: 10px 10px;
+                                border-radius: 44px;
+                                background: white !important;
+                                box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.25) inset,
+                                  0 2px 4px 0 rgba(0, 0, 0, 0.25) inset;
+                                font-weight: bold;
+                                text-align: center;
+                                text-decoration: none;
+                                color: #000;
+                              "
+                            >
+                              Click here to Sign In
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
           </table>
