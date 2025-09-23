@@ -148,7 +148,7 @@ app.get("/preview/:template", (req, res) => {
 
   // Email Invitation
     const templateData = {
-
+username:"Bilal",
     email: "example@example.com",
     password:
       "yujgjhb76867",
