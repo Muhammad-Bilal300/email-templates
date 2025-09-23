@@ -156,7 +156,7 @@
         margin: 0 auto;
       }
 
-       .footer {
+      .footer {
         text-align: center;
         color: gray;
         font-size: 14px;
@@ -236,7 +236,32 @@
             </tr>
             <tr class="detail-row">
               <td class="detail-label">Password</td>
-              <td class="detail-value"><%= password %></td>
+
+              <td
+                class="detail-value"
+                style="
+                  width: auto;
+                  display: flex;
+                  justify-content: space-between;
+                "
+              >
+                <%= password %>
+
+                <img
+                  src="/uploads/images/copy-icon.png"
+                  alt="copy_icon"
+                  width="20"
+                  height="20"
+                  style="
+                    /* display: block; */
+                    text-align: center;
+                    justify-content: center;
+                    border: 0;
+                    outline: none;
+                    text-decoration: none;
+                  "
+                />
+              </td>
             </tr>
             <tr class="detail-row">
               <td>
