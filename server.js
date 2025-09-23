@@ -73,32 +73,32 @@ app.get("/preview/:template", (req, res) => {
   //   };
 
   // For order-confirmations-2
-  const templateData = {
-    customer_name: "John Doe",
-    invoice_id: "INV-2024-0001",
-    product_variants: [
-      {
-        product_name: "Wireless Gaming Mouse",
-        variant_name: "RGB Edition",
-        quantity: 1,
-        amount: 49.99,
-        notes: "Gift wrapped",
-      },
-      {
-        product_name: "Wireless Gaming Mouse",
-        variant_name: "RGB Edition",
-        quantity: 1,
-        amount: 49.99,
-        notes: "Gift wrapped",
-      },
-    ],
-    invoice_amount: "149.99", // each item shows same total since template uses invoice_amount
-    purchase_date: "22 September 2024, 08:45 PM",
-    payment_gateway: "Stripe",
-    payment_status: "Paid",
-    wallet_amount: "$20.00",
-    type_amount: "$129.99", // final amount after wallet deduction
-  };
+  // const templateData = {
+  //   customer_name: "John Doe",
+  //   invoice_id: "INV-2024-0001",
+  //   product_variants: [
+  //     {
+  //       product_name: "Wireless Gaming Mouse",
+  //       variant_name: "RGB Edition",
+  //       quantity: 1,
+  //       amount: 49.99,
+  //       notes: "Gift wrapped",
+  //     },
+  //     {
+  //       product_name: "Wireless Gaming Mouse",
+  //       variant_name: "RGB Edition",
+  //       quantity: 1,
+  //       amount: 49.99,
+  //       notes: "Gift wrapped",
+  //     },
+  //   ],
+  //   invoice_amount: "149.99", // each item shows same total since template uses invoice_amount
+  //   purchase_date: "22 September 2024, 08:45 PM",
+  //   payment_gateway: "Stripe",
+  //   payment_status: "Paid",
+  //   wallet_amount: "$20.00",
+  //   type_amount: "$129.99", // final amount after wallet deduction
+  // };
 
   // for referral code user
   // const templateData = {
@@ -139,12 +139,12 @@ app.get("/preview/:template", (req, res) => {
   // };
 
   // For Inquiry
-  // const templateData = {
-  //   orderId: "3103893",
-  //   email: "example@example.com",
-  //   message:
-  //     "Hi, I would like to inquire about the Netflix 12 Month Account that’s currently out of stock. Could I perhaps get a reminder email when it’s back in stock.",
-  // };
+  const templateData = {
+    orderId: "3103893",
+    email: "example@example.com",
+    message:
+      "Hi, I would like to inquire about the Netflix 12 Month Account that’s currently out of stock. Could I perhaps get a reminder email when it’s back in stock.",
+  };
 
   // Email Invitation
   //   const templateData = {
