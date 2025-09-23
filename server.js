@@ -139,20 +139,20 @@ app.get("/preview/:template", (req, res) => {
   // };
 
   // For Inquiry
-  const templateData = {
-    orderId: "3103893",
-    email: "example@example.com",
-    message:
-      "Hi, I would like to inquire about the Netflix 12 Month Account that’s currently out of stock. Could I perhaps get a reminder email when it’s back in stock.",
-  };
+  // const templateData = {
+  //   orderId: "3103893",
+  //   email: "example@example.com",
+  //   message:
+  //     "Hi, I would like to inquire about the Netflix 12 Month Account that’s currently out of stock. Could I perhaps get a reminder email when it’s back in stock.",
+  // };
 
   // Email Invitation
-  //   const templateData = {
+    const templateData = {
 
-  //   email: "example@example.com",
-  //   password:
-  //     "yujgjhb76867",
-  // };
+    email: "example@example.com",
+    password:
+      "yujgjhb76867",
+  };
 
   //   const templateData = {
 
