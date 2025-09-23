@@ -100,22 +100,18 @@
 
       .order-summary {
         padding: 16px;
-        border-radius: 16px;
-        background: url("http://localhost:8080/uploads/images/gradient-image-2.png")
-          no-repeat;
-        background-size: cover;
+        border-radius: 14px;
+        border: 1px solid #ffffff1a;
+        background: #36363680;
       }
       .order-summary-heading {
         padding: 24px;
       }
 
       .order-summary-table {
-        /* backdrop-filter: blur(20px); */
-        border-radius: 35px;
-
-        background: url("http://localhost:8080/uploads/images/gradient-image-1.png")
-          no-repeat;
-        background-size: cover;
+        border-radius: 20px;
+        border: 1px solid #ffffff1a;
+        background: #2c2c2c33;
       }
 
       .summary-title {
@@ -186,7 +182,7 @@
         display: table;
         width: 100%;
         /* border-top: 0.42px solid white24; */
-        border-bottom: 0.42px solid white24;
+        border-bottom: 0.3px solid gray;
         padding: 15px 0;
       }
 
@@ -376,10 +372,6 @@
                 >
                   <tr>
                     <td>
-                      <!-- <div class="summary-title">
-                        Order id:
-                        <span class="status-badge"><%= invoice_id %></span>
-                      </div> -->
                       <% product_variants.forEach(function(item) { %>
                       <table
                         class="product-item"
@@ -388,7 +380,7 @@
                         cellspacing="0"
                       >
                         <tr>
-                          <td valign="top">
+                          <td valign="top" style="width: 75%">
                             <div style="display: flex">
                               <p class="product-name">
                                 <%= item.product_name %>,
@@ -400,15 +392,8 @@
                                 &nbsp;2 Months
                               </p>
                             </div>
-                            <!-- <p class="product-subtitle">
-                              <%= item.variant_name %>
-                            </p> -->
-                            <p class="product-subtitle">
-                              <!-- <%= item.variant_name %> -->
-                              Quantity:1
-                            </p>
-                            <!-- <p class="product-total">$<%= item.price %></p> -->
-                            <!-- <p class="product-total">$<%= invoice_amount %></p> -->
+
+                            <p class="product-subtitle">Quantity:1</p>
                           </td>
                           <td
                             style="
@@ -417,7 +402,7 @@
                               justify-content: end;
                             "
                           >
-                            <p class="product-total">$<%= invoice_amount %></p>
+                            <p class="product-total">$<%= item.amount %></p>
                           </td>
                         </tr>
                       </table>

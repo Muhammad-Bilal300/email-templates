@@ -73,26 +73,32 @@ app.get("/preview/:template", (req, res) => {
   //   };
 
   // For order-confirmations-2
-  // const templateData = {
-  //   customer_name: "John Doe",
-  //   invoice_id: "INV-2024-0001",
-  //   product_variants: [
-  //     {
-  //       product_name: "Wireless Gaming Mouse",
-  //       variant_name: "RGB Edition",
-  //     },
-  //     {
-  //       product_name: "Mechanical Keyboard",
-  //       variant_name: "Blue Switch",
-  //     },
-  //   ],
-  //   invoice_amount: "149.99", // each item shows same total since template uses invoice_amount
-  //   purchase_date: "22 September 2024, 08:45 PM",
-  //   payment_gateway: "Stripe",
-  //   payment_status: "Paid",
-  //   wallet_amount: "$20.00",
-  //   type_amount: "$129.99", // final amount after wallet deduction
-  // };
+  const templateData = {
+    customer_name: "John Doe",
+    invoice_id: "INV-2024-0001",
+    product_variants: [
+      {
+        product_name: "Wireless Gaming Mouse",
+        variant_name: "RGB Edition",
+        quantity: 1,
+        amount: 49.99,
+        notes: "Gift wrapped",
+      },
+      {
+        product_name: "Wireless Gaming Mouse",
+        variant_name: "RGB Edition",
+        quantity: 1,
+        amount: 49.99,
+        notes: "Gift wrapped",
+      },
+    ],
+    invoice_amount: "149.99", // each item shows same total since template uses invoice_amount
+    purchase_date: "22 September 2024, 08:45 PM",
+    payment_gateway: "Stripe",
+    payment_status: "Paid",
+    wallet_amount: "$20.00",
+    type_amount: "$129.99", // final amount after wallet deduction
+  };
 
   // for referral code user
   // const templateData = {
@@ -105,32 +111,32 @@ app.get("/preview/:template", (req, res) => {
   // };
 
   // for order created dummy data
-  const templateData = {
-    customer_name: "John Doe",
-    product_variants: [
-      {
-        product_name: "Wireless Gaming Mouse",
-        variant_name: "RGB Edition",
-        quantity: 1,
-        amount: 49.99,
-        notes: "Gift wrapped",
-      },
-      {
-        product_name: "Mechanical Keyboard",
-        variant_name: "Blue Switch",
-        quantity: 1,
-        amount: 89.99,
-        notes: "",
-      },
-      {
-        product_name: "Gaming Headset",
-        variant_name: "Surround Sound",
-        quantity: 2,
-        amount: 119.98,
-        notes: "Deliver before weekend",
-      },
-    ],
-  };
+  // const templateData = {
+  //   customer_name: "John Doe",
+  //   product_variants: [
+  //     {
+  //       product_name: "Wireless Gaming Mouse",
+  //       variant_name: "RGB Edition",
+  //       quantity: 1,
+  //       amount: 49.99,
+  //       notes: "Gift wrapped",
+  //     },
+  //     {
+  //       product_name: "Mechanical Keyboard",
+  //       variant_name: "Blue Switch",
+  //       quantity: 1,
+  //       amount: 89.99,
+  //       notes: "",
+  //     },
+  //     {
+  //       product_name: "Gaming Headset",
+  //       variant_name: "Surround Sound",
+  //       quantity: 2,
+  //       amount: 119.98,
+  //       notes: "Deliver before weekend",
+  //     },
+  //   ],
+  // };
 
   // For Inquiry
   // const templateData = {

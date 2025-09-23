@@ -29,7 +29,6 @@
         background-size: cover;
         padding: 50px;
         position: relative;
-        
       }
       img.bg-image-1 {
         position: absolute;
@@ -99,11 +98,10 @@
       }
 
       .purchase-summary {
-        border-radius: 16px;
         padding: 16px;
-        background: url("http://localhost:8080/uploads/images/gradient-image-2.png")
-          no-repeat;
-        background-size: cover;
+        border-radius: 14px;
+        border: 1px solid #ffffff1a;
+        background: #36363680;
 
         /* border-top: 1px solid rgba(255, 255, 255, 0.1);
         border-left: 1px solid rgba(255, 255, 255, 0.1);
@@ -114,11 +112,9 @@
       }
 
       .purchase-summary-table {
-        border-radius: 35px;
-        background: url("http://localhost:8080/uploads/images/gradient-image-1.png")
-          no-repeat;
-        background-size: cover;
-        height: auto;
+        border-radius: 20px;
+        border: 1px solid #ffffff1a;
+        background: #2c2c2c33;
       }
 
       .summary-title {
@@ -382,7 +378,7 @@
                         cellspacing="0"
                       >
                         <tr>
-                          <td valign="top">
+                          <td valign="top" style="width: 75%">
                             <div style="display: flex">
                               <p class="product-name">
                                 <%= item.product_name %>,
