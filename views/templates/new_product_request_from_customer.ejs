@@ -112,7 +112,8 @@
         color: rgba(255, 255, 255, 0.7);
         font-size: 16px;
         font-weight: 400;
-        width: 150px;
+        min-width: 100px;
+        max-width: 100px;
         align-content: start;
       }
 
@@ -120,6 +121,10 @@
         color: white !important;
         font-size: 16px;
         font-weight: 600;
+        text-align: start;
+        min-width: 200px;
+        max-width: 200px;
+        align-content: start;
       }
 
       .total-row .detail-value {
@@ -215,31 +220,7 @@
             </tr>
             <tr class="detail-row">
               <td class="detail-label">Email</td>
-              <td
-                class="detail-value"
-                style="
-                  width: auto;
-                  display: flex;
-                  justify-content: space-between;
-                "
-              >
-                <%= email %>
-
-                <img
-                  src="/uploads/images/copy.png"
-                  alt="copy_icon"
-                  width="20"
-                  height="20"
-                  style="
-                    /* display: block; */
-                    text-align: center;
-                    justify-content: center;
-                    border: 0;
-                    outline: none;
-                    text-decoration: none;
-                  "
-                />
-              </td>
+              <td class="detail-value"><%= email %></td>
             </tr>
             <tr class="detail-row">
               <td class="detail-label">Requested Product</td>
@@ -249,7 +230,10 @@
               <td class="detail-label">Date & Time</td>
               <td class="detail-value"><%= dateTime %></td>
             </tr>
-            <tr class="detail-row">
+            <tr
+              class="detail-row"
+              style="border-bottom: none; padding-bottom: 15px"
+            >
               <td class="detail-label">Message</td>
               <td class="detail-value"><%= message %></td>
             </tr>

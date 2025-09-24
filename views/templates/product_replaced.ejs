@@ -25,8 +25,8 @@
         max-width: 600px;
         margin: 0 auto;
         /* background: #151515; */
-        background: url("/uploads/images/email-templates-bg.png") no-repeat
-          center center;
+        background: url("https://files.invader.shop/public/uploads/invader-products/email-templates-bg.png")
+          no-repeat center center;
         background-size: cover;
         padding: 50px;
         position: relative;
@@ -193,6 +193,7 @@
         color: rgba(255, 255, 255, 0.7);
         font-size: 16px;
         font-weight: 400;
+        padding-bottom: 10px;
       }
 
       .detail-value {
@@ -334,9 +335,7 @@
                 >
                   Product Replaced!
                 </h1>
-                <p style="color: white !important; font-weight: 400">
-                  Dear <%= customer_name %>,
-                </p>
+                <p style="color: white !important; font-weight: 400">Hello,</p>
                 <p style="color: rgba(172, 172, 172, 0.7); font-size: 12px">
                   We have replaced your product as you requested, so you can
                   have a seamless experience.
@@ -358,29 +357,6 @@
                   width="100%"
                   cellpadding="0"
                   cellspacing="0"
-                  style="padding-top: 0px"
-                >
-                  <tr>
-                    <td>
-                      <div
-                        style="
-                          margin: 0;
-                          font-size: 24px;
-                          color: white !important;
-                          font-weight: semibold;
-                        "
-                      >
-                        Ticket ID : 456476567576
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-                <table
-                  class="order-summary-heading"
-                  width="100%"
-                  cellpadding="0"
-                  cellspacing="0"
-                  style="padding-top: 10px"
                 >
                   <tr>
                     <td>
@@ -394,54 +370,6 @@
                       >
                         Original Product Details
                       </div>
-                    </td>
-                  </tr>
-                </table>
-
-                <table
-                  class="order-summary"
-                  width="96.5%"
-                  cellpadding="0"
-                  cellspacing="0"
-                  style="margin-left: 9px; margin-right: 9px"
-                >
-                  <tr>
-                    <td>
-                      <% product_variants.forEach(function(item) { %>
-                      <table
-                        class="product-item"
-                        width="100%"
-                        cellpadding="0"
-                        cellspacing="0"
-                      >
-                        <tr>
-                          <td valign="top" style="width: 75%">
-                            <div style="display: flex">
-                              <p class="product-name">
-                                <%= item.product_name %>,
-                              </p>
-                              <p
-                                class="product-name"
-                                style="color: rgb(180, 180, 180); width: 100px"
-                              >
-                                &nbsp;2 Months
-                              </p>
-                            </div>
-
-                            <p class="product-subtitle">Quantity:1</p>
-                          </td>
-                          <td
-                            style="
-                              display: flex;
-                              align-items: start;
-                              justify-content: end;
-                            "
-                          >
-                            <p class="product-total">$<%= item.amount %></p>
-                          </td>
-                        </tr>
-                      </table>
-                      <% }); %>
                     </td>
                   </tr>
                 </table>
@@ -461,9 +389,13 @@
                         cellspacing="0"
                       >
                         <tr>
-                          <td class="detail-label">Disney</td>
-                          <td align="center" class="detail-value">
-                            example@example.com:Testd82dj10j0
+                          <td class="detail-label">
+                            <%= originalProductName %>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="detail-value">
+                            <%= originalInventoryItem %>
                           </td>
                         </tr>
                       </table>
@@ -506,58 +438,6 @@
                 </table>
 
                 <table
-                  class="order-summary"
-                  width="96.5%"
-                  cellpadding="0"
-                  cellspacing="0"
-                  style="margin-left: 9px; margin-right: 9px"
-                >
-                  <tr>
-                    <td>
-                      <% product_variants.forEach(function(item) { %>
-                      <table
-                        class="product-item"
-                        width="100%"
-                        cellpadding="0"
-                        cellspacing="0"
-                      >
-                        <tr>
-                          <td valign="top">
-                            <div style="display: flex">
-                              <p class="product-name">
-                                <%= item.product_name %>,
-                              </p>
-                              <p
-                                class="product-name"
-                                style="color: rgb(180, 180, 180)"
-                              >
-                                &nbsp;2 Months
-                              </p>
-                            </div>
-
-                            <p class="product-subtitle">
-                              <!-- <%= item.variant_name %> -->
-                              Quantity:1
-                            </p>
-                          </td>
-
-                          <td
-                            style="
-                              display: flex;
-                              align-items: start;
-                              justify-content: end;
-                            "
-                          >
-                            <p class="product-total">$<%= item.amount %></p>
-                          </td>
-                        </tr>
-                      </table>
-                      <% }); %>
-                    </td>
-                  </tr>
-                </table>
-
-                <table
                   class="order-details"
                   width="100%"
                   cellpadding="0"
@@ -572,9 +452,11 @@
                         cellspacing="0"
                       >
                         <tr>
-                          <td class="detail-label">Disney</td>
-                          <td align="center" class="detail-value">
-                            example@example.com:Testd82dj10j0
+                          <td class="detail-label"><%= emailProductName %></td>
+                        </tr>
+                        <tr>
+                          <td class="detail-value">
+                            <%= replacementInventoryItem %>
                           </td>
                         </tr>
                       </table>

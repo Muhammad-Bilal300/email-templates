@@ -39,38 +39,38 @@ app.get("/preview/:template", (req, res) => {
   // ✅ Dummy Data for order-confirmations-2
 
   //   for Thank you for your purchase
-  //   const templateData = {
-  //     customer_name: "John Doe",
-  //     invoice_id: "INV-2024-1001",
-  //     invoice_amount: 299.99,
-  //     product_variants: [
-  //       {
-  //         product_name: "Gaming Mouse",
-  //         variant_name: "RGB Edition",
-  //         quantity: 1,
-  //         notes: "Gift wrapped", // optional
-  //       },
-  //       {
-  //         product_name: "Mechanical Keyboard",
-  //         variant_name: "Blue Switch",
-  //         quantity: 1,
-  //       },
-  //     ],
-  //     inventory_items_sold: [
-  //       {
-  //         item_info: { value: "Gaming Mouse - RGB Edition" },
-  //         product_info: { notes: "Check warranty card inside the box." },
-  //       },
-  //       {
-  //         item_info: { value: "Mechanical Keyboard - Blue Switch" },
-  //         product_info: { notes: "" },
-  //       },
-  //     ],
-  //     FRONTEND_URL: "https://example.com",
-  //     hash: "abc123xyz",
-  //     customer_id: "user_789",
-  //     customer_email: "john@example.com",
-  //   };
+    // const templateData = {
+    //   customer_name: "John Doe",
+    //   invoice_id: "INV-2024-1001",
+    //   invoice_amount: 299.99,
+    //   product_variants: [
+    //     {
+    //       product_name: "Gaming Mouse",
+    //       variant_name: "RGB Edition",
+    //       quantity: 1,
+    //       notes: "Gift wrapped", // optional
+    //     },
+    //     {
+    //       product_name: "Mechanical Keyboard",
+    //       variant_name: "Blue Switch",
+    //       quantity: 1,
+    //     },
+    //   ],
+    //   inventory_items_sold: [
+    //     {
+    //       item_info: { value: "Gaming Mouse - RGB Edition" },
+    //       product_info: { notes: "Check warranty card inside the box." },
+    //     },
+    //     {
+    //       item_info: { value: "Mechanical Keyboard - Blue Switch" },
+    //       product_info: { notes: "" },
+    //     },
+    //   ],
+    //   FRONTEND_URL: "https://example.com",
+    //   hash: "abc123xyz",
+    //   customer_id: "user_789",
+    //   customer_email: "john@example.com",
+    // };
 
   // For order-confirmations-2
   // const templateData = {
@@ -147,12 +147,12 @@ app.get("/preview/:template", (req, res) => {
   // };
 
   // Email Invitation
-    const templateData = {
-username:"Bilal",
-    email: "example@example.com",
-    password:
-      "yujgjhb76867",
-  };
+//     const templateData = {
+// username:"Bilal",
+//     email: "example@example.com",
+//     password:
+//       "yujgjhb76867",
+//   };
 
   //   const templateData = {
 
@@ -174,6 +174,14 @@ username:"Bilal",
   //   dateTime: "22 September 2024, 08:45 PM",
   //   requested_product: "Disney, 2 Month",
   // };
+
+
+  const templateData = {
+  originalProductName: "Invader GPS Tracker Pro",
+  originalInventoryItem: "INV-1234567890",
+  emailProductName: "Invader GPS Tracker Ultra",
+  replacementInventoryItem: "INV-0987654321"
+};
   // For Congratulation for order creation
   res.render(`templates/${template}`, templateData);
 });
