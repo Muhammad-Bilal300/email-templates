@@ -101,14 +101,14 @@ app.get("/preview/:template", (req, res) => {
   // };
 
   // for referral code user
-  // const templateData = {
-  //   referal_link: "https://example.com/referral/12345",
-  //   referalSettings: {
-  //     type: "Wallet",
-  //     amount: 100,
-  //     percent: 10,
-  //   },
-  // };
+  const templateData = {
+    referal_link: "https://example.com/referral/12345",
+    referalSettings: {
+      type: "Wallet",
+      amount: 100,
+      percent: 10,
+    },
+  };
 
   // for order created dummy data
   // const templateData = {
@@ -176,12 +176,12 @@ app.get("/preview/:template", (req, res) => {
   // };
 
 
-  const templateData = {
-  originalProductName: "Invader GPS Tracker Pro",
-  originalInventoryItem: "INV-1234567890",
-  emailProductName: "Invader GPS Tracker Ultra",
-  replacementInventoryItem: "INV-0987654321"
-};
+//   const templateData = {
+//   originalProductName: "Invader GPS Tracker Pro",
+//   originalInventoryItem: "INV-1234567890",
+//   emailProductName: "Invader GPS Tracker Ultra",
+//   replacementInventoryItem: "INV-0987654321"
+// };
   // For Congratulation for order creation
   res.render(`templates/${template}`, templateData);
 });
